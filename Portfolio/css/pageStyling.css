@@ -211,6 +211,11 @@ padding: 0 0;
   display: block;
 }
 
+#VW-landing{
+height: 536px;
+width: auto;
+}
+
 .landing-img1:hover {
   opacity: 0.4;
 }
