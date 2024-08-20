@@ -5,60 +5,67 @@
 
 body {
   background-color: black;
-height: 100vh;
+  height: 100vh;
   margin-top: 40px;
 }
 
 
-#main-container{
+#main-container {
   display: flex;
   flex-direction: column;
   width: 100%;
-   /* border: 3px solid rgb(9, 136, 255); */
+  /* border: 3px solid rgb(9, 136, 255); */
 }
 
 
-#header-name{
-  width:100%;
+
+/* First and last name title styling  */
+
+#header-name {
+  width: 100%;
   display: flex;
   justify-content: center;
-margin-bottom: 20px;
+  margin-bottom: 20px;
 }
 
-.FirstName{
+.FirstName {
   /* border: 3px, solid  blue ; */
   width: 40%;
   margin-right: 20px;
 }
 
-.LastName{
+.LastName {
   /* border: 3px, solid  blue ; */
   width: 40%;
   margin-left: 20px;
 }
 
 
-#nav-bar{
-  /* border: 3px solid rgb(9, 136, 255); */
-  display: flex;
-flex-direction: row;
-justify-content: center;
+/* Nav bar styling */
 
+#nav-bar {
+  /* border: 3px solid rgb(9, 136, 255);  */
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
 }
 
 
 .nav-text {
   font-family: 'Oswald', sans-serif;
   font-size: 30px;
- width: 20vw;
- display: flex;
- justify-content: center;
+  width: 20vw;
+  margin: 0;
+  display: flex;
+  justify-content: center;
   /* border: 3px solid red; */
 }
 
-.home{
-color: rgb(181, 205, 104);  
+.home {
+  color: rgb(181, 205, 104);
 }
+
 a .home:hover {
   color: rgb(195, 255, 0);
 }
@@ -67,7 +74,8 @@ a .home:hover {
   background-color: rgb(0, 0, 0);
   transition: .3s;
 }
-a .home:active{
+
+a .home:active {
   background-color: rgb(48, 61, 4);
   border-radius: 8px;
   padding-left: 25px;
@@ -75,9 +83,10 @@ a .home:active{
 }
 
 
-.work{
-color: rgb(171, 88, 239);
+.work {
+  color: rgb(171, 88, 239);
 }
+
 a .work:hover {
   color: rgb(203, 61, 255);
 }
@@ -86,7 +95,8 @@ a .work:hover {
   background-color: rgb(0, 0, 0);
   transition: .3s;
 }
-a .work:active{
+
+a .work:active {
   background-color: rgb(64, 40, 81);
   border-radius: 8px;
   padding-left: 25px;
@@ -94,9 +104,10 @@ a .work:active{
 }
 
 
-.about{
-color: rgb(64, 143, 193);
+.about {
+  color: rgb(64, 143, 193);
 }
+
 a .about:hover {
   color: rgb(56, 209, 255);
 }
@@ -105,17 +116,19 @@ a .about:hover {
   background-color: rgb(0, 0, 0);
   transition: .3s;
 }
-a .about:active{
+
+a .about:active {
   background-color: rgb(30, 57, 73);
   border-radius: 8px;
   padding-left: 25px;
   padding-right: 25px;
 }
 
-.contact{
+.contact {
   color: orange
-/* color: rgb(181, 205, 104);   */
+    /* color: rgb(181, 205, 104);   */
 }
+
 a .contact:hover {
   color: rgb(255, 204, 0);
 }
@@ -124,7 +137,8 @@ a .contact:hover {
   background-color: rgb(0, 0, 0);
   transition: .3s;
 }
-a .contact:active{
+
+a .contact:active {
   background-color: rgb(109, 74, 10);
   border-radius: 8px;
   padding-left: 25px;
@@ -133,10 +147,11 @@ a .contact:active{
 
 
 
+/* moving carousel  */
 
 .p-s {
   color: aliceblue;
-  font-family:  'Oswald', sans-serif;
+  font-family: 'Oswald', sans-serif;
   font-size: 20px;
   line-height: 90%;
   /* letter-spacing: -.02em; */
@@ -145,48 +160,47 @@ a .contact:active{
   margin-left: 5px;
 }
 
-
 #dot {
   height: 6px;
   width: 6px;
   background-color: aliceblue;
   border-radius: 50%;
-/* border: 3px solid red; */
-
-
+  /* border: 3px solid red; */
 }
 
-
 .marquee-container {
-overflow: hidden;
-width: 100%;
-/* border: 3px solid pink; */
-display: flex;
-margin-top: 20px;
-margin-bottom: 40px;
+  overflow: hidden;
+  width: 100%;
+  /* border: 3px solid pink; */
+  display: flex;
+  margin-top: 20px;
+  margin-bottom: 40px;
 }
 
 .marquee-content {
-display: flex;
-justify-content: center;
-align-items: center;
-animation: marquee 20s linear infinite;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  animation: marquee 20s linear infinite;
 }
 
-.marquee-content div{
-flex: 0 0 auto;
-padding: 0 0;
-
+.marquee-content div {
+  flex: 0 0 auto;
+  padding: 0 0;
 }
 
 @keyframes marquee {
-0% {
-  transform: translateX(0);
+  0% {
+    transform: translateX(0);
+  }
+
+  100% {
+    transform: translateX(-100%);
+  }
 }
-100% {
-  transform: translateX(-100%);
-}
-}
+
+
+/* Not sure if this is useful */
 
 #Virgin-Wines {
   display: flex;
@@ -194,24 +208,26 @@ padding: 0 0;
   align-items: center;
   margin-top: 20px;
   /* border: 10px solid red; */
-  flex-wrap: wrap; /* Allow items to wrap onto multiple lines */
+  flex-wrap: wrap;
+  /* Allow items to wrap onto multiple lines */
 }
 
 .img-container {
   position: relative;
   margin: 20px;
-  flex: 0 0 25%; /* Each item takes up 25% of the container's width */
+  flex: 0 0 25%;
+  /* Each item takes up 25% of the container's width */
+}
+
+#VW-landing {
+  height: 536px;
+  width: auto;
 }
 
 
-#VW-landing{
-height: 536px;
-width: auto;
-}
 
 
-
-
+/* home page - for the slideshow  */
 
 .slider {
   position: relative;
@@ -224,7 +240,7 @@ width: auto;
   display: flex;
   overflow-x: hidden;
   scroll-behavior: smooth;
-  margin-top: 40px;
+  margin-top: 45px;
 }
 
 #scroll-container img {
@@ -287,441 +303,710 @@ width: auto;
 
 
 
+/* Work page - for Virgin Wines */
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-* {
-  margin: 0;
-  text-decoration: none;
-  cursor: default;
-  scroll-behavior: smooth;
-}
-
-
-body {
-  background-color: black;
-}
-
-
-#main-container{
-  display: flex;
-  flex-direction: column;
-   /* border: 3px solid rgb(9, 136, 255); */
-}
-
-#nav-bar{
-  /* border: 3px solid rgb(9, 136, 255); */
-  display: flex;
-flex-direction: row;
-justify-content: center;
-}
-
-
-.nav-text {
-  font-family: 'Oswald', sans-serif;
-  font-size: 30px;
- width: 24vw;
- display: flex;
- justify-content: center;
-  /* border: 3px solid red; */
-}
-
-.home{
-color: rgb(181, 205, 104);  
-}
-a .home:hover {
-  color: rgb(195, 255, 0);
-}
-
-a .home:hover {
-  background-color: rgb(0, 0, 0);
-  transition: .3s;
-}
-a .home:active{
-  background-color: rgb(48, 61, 4);
-  border-radius: 8px;
-  padding-left: 25px;
-  padding-right: 25px;
-}
-
-
-.work{
-color: rgb(171, 88, 239);
-}
-a .work:hover {
-  color: rgb(203, 61, 255);
-}
-
-a .work:hover {
-  background-color: rgb(0, 0, 0);
-  transition: .3s;
-}
-a .work:active{
-  background-color: rgb(64, 40, 81);
-  border-radius: 8px;
-  padding-left: 25px;
-  padding-right: 25px;
-}
-
-
-.about{
-color: rgb(64, 143, 193);
-}
-a .about:hover {
-  color: rgb(56, 209, 255);
-}
-
-a .about:hover {
-  background-color: rgb(0, 0, 0);
-  transition: .3s;
-}
-a .about:active{
-  background-color: rgb(30, 57, 73);
-  border-radius: 8px;
-  padding-left: 25px;
-  padding-right: 25px;
-}
-
-.contact{
-  color: orange
-/* color: rgb(181, 205, 104);   */
-}
-a .contact:hover {
-  color: rgb(255, 204, 0);
-}
-
-a .contact:hover {
-  background-color: rgb(0, 0, 0);
-  transition: .3s;
-}
-a .contact:active{
-  background-color: rgb(109, 74, 10);
-  border-radius: 8px;
-  padding-left: 25px;
-  padding-right: 25px;
-}
-
-
-
-
-
-
-/* top navigation bar */
-.top-nav {
-  overflow: hidden;
-  top: 0;
-  transition: top 0.5s;
-}
-
-.top-nav a {
-  float: left;
-  text-align: center;
-  padding: 14px 20px;
-  text-decoration: none;
-  font-size: 28px;
-  font-family: 'Oswald', sans-serif;
-  color: aliceblue;
-}
-
-.top-nav a:hover {
-/*   background-color: #f4adda93; */
-  color: black;
-}
-
-.top-nav a.split-top {
-  float: right
-}
-
-
-
-
-.main {
-  /* margin-right: 270px; */
-  padding: 0px 200px;
-  ;
-  /* border: 3px solid red; */
-}
-
-.title {
-  font-family: 'Oswald', sans-serif;
-  font-size: 120px;
-  color: aliceblue;
-  /* margin-right: 270px; */
+#work-VW-container {
+  width: 100%;
   display: flex;
   justify-content: center;
-  height: 160px;
-  /* border: 3px solid red; */
 }
 
+/* First row with text and one image */
 
-
-/* sticky second nav css for each html */
-#work-contents {
-  position: sticky;
-  top: 0;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  margin: auto;
-  padding-top: 20px;
-}
-
-#illustration-contents {
-  position: sticky;
-  top: 0;
-  width: 30%;
-  margin: auto;
-  padding-top: 10px;
-}
-
-
-
-
-.contol-nav {
-  overflow: hidden;
-  top: 0;
-  transition: top 0.3s;
-}
-
-.control-nav a {
-  padding: 5px 40px;
-  margin-left: 2px;
-  text-decoration: none;
-  font-size: 40px;
-  font-family: 'Oswald', sans-serif;
-  color: aliceblue;
-  background-color: rgba(0, 0, 0, 0.618);
-}
-
-.control-nav a:hover {
-/*   background-color: #f4adda93; */
-  color: black;
-}
-
-.sticky { 
-  position: fixed;
-  top: 0;
-  width: 80%;
-}
-
-
-
-
-/* illustration */  
-
-
-#Virgin-wines{ 
-  /* border: 4px solid blue; */
-  width: 99%;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-}
-
-#VW{
-margin-top: 80px;
-}
-
-.vw-r1{
-  width: 500px;
-  margin: 20px;
-  margin-top: 60px;
-/* border: 4px solid red; */
-}
-
-.vw-row{
-  width: 260px;
-margin: 20px;
-margin-bottom: 80px;
-  /* border: 4px solid pink; */
-}
-
-
-
-/* commission */
-#commission-row1 {
+#vw-row {
   display: flex;
   flex-direction: row;
-  justify-content: center;
-  /* margin-right: 270px; */
-  padding-top: 60px;
+  width: 90%;
+  margin-top: 40px;
+  box-sizing: border-box;
+  /* border: 2px solid blue; */
 }
 
-.commission-img1 {
-  height: fit-content;
-  /* width: 350px; */
-  padding-left: 20px;
-  padding-right: 20px;
-  padding-bottom: 100px;
-}
-
-#editorial-1:hover{
-  opacity: 0.3;
-}
-
-#editorial-2:hover{
-  opacity: 0.3;
-}
-
-/* .c-r-1 {
- height: 520px;
- width: 300px;
-} */
-
-
-
-/* pattern css */
-#pattern-row {
-  display: flex;
-  flex-direction: row;
-  justify-content: center;
-  align-items: center;
-  /* margin-right: 270px; */
-  margin-top: 60px;
-}
-
-#pattern-c1 {
-  display: flex;
-  flex-direction: column;
-  /* border: 4px solid red; */
-}
-
-#pattern-c2 {
-  display: flex;
-  flex-direction: column;
-}
-
-#pattern-c3 {
-  display: flex;
-  flex-direction: column;
-}
-
-.pattern-T {
+#work-text {
   display: flex;
   align-items: center;
   justify-content: center;
-  font-size: 18px;
+  flex-direction: column;
+  width: 50%;
+  box-sizing: border-box;
+  /* border: 3px solid blue; */
+}
+
+.work-header-text {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  /* margin-top: 40px; */
+  font-size: 22px;
   font-family: 'Oswald', sans-serif;
   color: aliceblue;
+  width: 50%;
   /* border: 2px solid red; */
   /* height: 65px; */
   /* padding-bottom: 30px; */
-  margin-top: 20px;
+  /* margin-top: 20px; */
   /* margin-bottom: 20px; */
 }
 
-
-.pattern-img {
-  width: 380px;
-  padding-left: 20px;
-  padding-right: 20px;
-  padding-bottom: 40px;
+.descript-text {
+  margin-top: 10px;
+  color: aliceblue;
+  /* margin-left:40px;
+  margin-right: 40px; */
+  padding-left: 70px;
+  padding-right: 70px;
+  box-sizing: border-box;
+  font-size: 14px;
+  font-weight: 400;
+  font-family: Arial, Helvetica, sans-serif;
+  /* border: 3px solid pink; */
 }
 
 
-
-
-
-/* painting */
-
-/* .painting-img{
-  width: 700px;
-  display: flex;
-  flex-direction: column;
-
-}  */
-
-
-#painting-row {
-  display: flex;
-  flex-direction: row;
-  justify-content: center;
-  /* margin-right: 270px; */
-  padding-top: 70px;
-}
-
-#painting-c1 {
-  display: flex;
-  flex-direction: column;
-  /* border: 4px solid red; */
-}
-
-#painting-c2 {
-  display: flex;
-  flex-direction: column;
-}
-
-#painting-c3 {
-  display: flex;
-  flex-direction: column;
-}
-
-.painting-T {
+#vw-imagery {
+  /* border: 2px solid blue; */
+  width: 55%;
   display: flex;
   align-items: center;
   justify-content: center;
-  font-size: 100px;
-  font-family: 'Oswald', sans-serif;
-  color: aliceblue;
-  /* border: 2px solid red; */
-  height: 65px;
-  padding-bottom: 55px;
+}
+
+@media screen and (max-width: 768px) {
+  #vw-row {
+    flex-direction: column;
+    /* Stack the text and imagery sections vertically */
+    align-items: center;
+    /* Center the content */
+    margin-top: 25px;
+
+  }
+
+  #work-text,
+  #vw-imagery,
+  .descript-text {
+    width: 100%;
+    /* Each section takes up the full width of the container */
+    padding-top: 5px;
+    /* Adjust padding for smaller screens */
+    padding-bottom: 10px;
+    font-size: 16px;
+
+  }
+
+  .work-header-text {
+    width: 100%;
+    /* Make sure the header text spans the full width */
+  }
+}
+
+/* second row for four images */
+
+#vw-row1 {
+  display: flex;
+  flex-wrap: wrap;
+  /* Allows the images to wrap onto the next row */
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  margin-top: 25px;
+}
+
+.vw-images {
+  padding: 20px;
+  /* Add padding to each image */
+  width: 22%;
+  /* Each image takes up 25% of the row width */
+  height: auto;
+  box-sizing: border-box;
+  /* Ensures padding is included in width calculation */
+}
+
+@media screen and (max-width: 768px) {
+  .vw-images {
+    padding: 10px;
+    width: 40%;
+    /* Each image takes up 50% of the row width on smaller screens */
+  }
+}
+
+
+
+/* work- page - for creative conscience */
+
+#work-CG-container {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+
+#cg-row {
+  display: flex;
+  flex-direction: row;
+  width: 90%;
+  margin-top: 80px;
+  box-sizing: border-box;
+}
+
+#cg-imagery {
+  width: 55%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+@media screen and (max-width: 768px) {
+  #cg-row {
+    flex-direction: column;
+    /* Stack the text and imagery sections vertically */
+    align-items: center;
+    /* Center the content */
+    margin-top: 25px;
+
+  }
+
+  #work-text,
+  #cg-imagery,
+  .descript-text {
+    width: 100%;
+    /* Each section takes up the full width of the container */
+    padding-top: 5px;
+    /* Adjust padding for smaller screens */
+    padding-bottom: 10px;
+    font-size: 16px;
+  }
+
+  .work-header-text {
+    width: 100%;
+    /* Make sure the header text spans the full width */
+  }
+}
+
+
+
+#cg-row1 {
+  display: flex;
+  flex-wrap: wrap;
+  /* Allows the images to wrap onto the next row */
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  margin-top: 15px;
+}
+
+#cg-c1 {
+  width: 35%;
+}
+
+.cg-character-images {
+  padding: 20px;
+  /* Add padding to each image */
+  width: 30%;
+  /* Each image takes up 25% of the row width */
+  height: auto;
+  box-sizing: border-box;
+  /* Ensures padding is included in width calculation */
+}
+
+.cg-images {
+  padding: 20px;
+  /* Add padding to each image */
+  width: 29%;
+  /* Each image takes up 25% of the row width */
+  height: auto;
+  box-sizing: border-box;
+  /* Ensures padding is included in width calculation */
+}
+
+@media screen and (max-width: 768px) {
+
+  .cg-images,
+  .cg-character-images {
+    padding: 10px;
+    width: 40%;
+    /* Each image takes up 50% of the row width on smaller screens */
+  }
+}
+
+@media screen and (max-width: 768px) {
+  #cg-c1 {
+    padding: 10px;
+    width: 45%;
+    /* Each image takes up 50% of the row width on smaller screens */
+  }
+}
+
+
+/* work- page - for Exhale coffee */
+
+#work-Ex-container {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+
+#ex-row {
+  display: flex;
+  flex-direction: row;
+  width: 90%;
+  margin-top: 80px;
+  box-sizing: border-box;
+}
+
+#ex-imagery {
+  width: 55%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+@media screen and (max-width: 768px) {
+  #ex-row {
+    flex-direction: column;
+    /* Stack the text and imagery sections vertically */
+    align-items: center;
+    /* Center the content */
+    margin-top: 25px;
+
+  }
+
+  #work-text,
+  #ex-imagery,
+  .descript-text {
+    width: 100%;
+    /* Each section takes up the full width of the container */
+    padding-top: 5px;
+    /* Adjust padding for smaller screens */
+    padding-bottom: 10px;
+    font-size: 16px;
+  }
+
+  .work-header-text {
+    width: 100%;
+    /* Make sure the header text spans the full width */
+  }
+}
+
+
+#ex-row1 {
+  display: flex;
+  flex-wrap: wrap;
+  /* Allows the images to wrap onto the next row */
+  justify-content: center;
+  align-items: center;
+  width: 100%;
   margin-top: 20px;
 }
 
-.painting-img {
-  width: 380px;
-  padding-left: 5px;
-  padding-right: 5px;
-  padding-bottom: 10px;
+.ex-images {
+  padding: 20px;
+  /* Add padding to each image */
+  width: 29%;
+  /* Each image takes up 25% of the row width */
+  height: auto;
+  box-sizing: border-box;
+  /* Ensures padding is included in width calculation */
 }
 
-/* computing */
+@media screen and (max-width: 768px) {
+  .ex-images {
+    padding: 10px;
+    width: 40%;
+    /* Each image takes up 50% of the row width on smaller screens */
+  }
+}
 
-.computing-T{
+
+/* work- page - for panda car */
+
+#work-PC-container {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+
+#pc-row {
+  display: flex;
+  flex-direction: row;
+  width: 90%;
+  margin-top: 80px;
+  box-sizing: border-box;
+}
+
+#pc-imagery {
+  width: 55%;
   display: flex;
   align-items: center;
   justify-content: center;
-  font-size: 80px;
+}
+
+@media screen and (max-width: 768px) {
+  #pc-row {
+    flex-direction: column;
+    /* Stack the text and imagery sections vertically */
+    align-items: center;
+    /* Center the content */
+    margin-top: 25px;
+
+  }
+
+  #work-text,
+  #pc-imagery,
+  .descript-text {
+    width: 100%;
+    /* Each section takes up the full width of the container */
+    padding-top: 5px;
+    /* Adjust padding for smaller screens */
+    padding-bottom: 10px;
+    font-size: 16px;
+  }
+
+  .work-header-text {
+    width: 100%;
+    /* Make sure the header text spans the full width */
+  }
+}
+
+
+#pc-row1 {
+  display: flex;
+  flex-wrap: wrap;
+  /* Allows the images to wrap onto the next row */
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  margin-top: 20px;
+}
+
+#pc-1 {
+  width: 38.5%;
+}
+
+.pc-images {
+  padding: 20px;
+  /* Add padding to each image */
+  width: 40%;
+  /* Each image takes up 25% of the row width */
+  height: auto;
+  box-sizing: border-box;
+  /* Ensures padding is included in width calculation */
+}
+
+@media screen and (max-width: 768px) {
+  .pc-images {
+    padding: 10px;
+    width: 48%;
+    /* Each image takes up 50% of the row width on smaller screens */
+  }
+}
+
+@media screen and (max-width: 768px) {
+  #pc-1 {
+    padding: 10px;
+    width: 46.5%;
+    /* Each image takes up 50% of the row width on smaller screens */
+  }
+}
+
+
+/* work- page - for fashion illu */
+
+#work-FI-container {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+
+#fi-row {
+  display: flex;
+  flex-direction: row;
+  width: 90%;
+  margin-top: 80px;
+  box-sizing: border-box;
+
+}
+
+#fi-imagery {
+  width: 55%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+}
+
+
+@media screen and (max-width: 1200px) {
+  #fi-row {
+    /* flex-direction: column; Stack the text and imagery sections vertically */
+    align-items: center;
+    /* Center the content */
+    /* margin-top: 30px */
+  }
+
+  #work-text,
+  .descript-text {
+    width: 67%;
+    /* Each section takes up the full width of the container */
+    padding-top: 5px;
+    /* Adjust padding for smaller screens */
+    padding-bottom: 10px;
+    font-size: 14px;
+  }
+
+
+  .descript-text {
+    padding-left: 0px;
+    padding-right: 0px;
+  }
+
+
+  .work-header-text {
+    width: 100%;
+    /* Make sure the header text spans the full width */
+  }
+}
+
+
+
+@media screen and (max-width: 768px) {
+  #fi-row {
+    flex-direction: column;
+    /* Stack the text and imagery sections vertically */
+    align-items: center;
+    /* Center the content */
+    margin-top: 30px;
+  }
+
+  #work-text,
+  #fi-imagery,
+  .descript-text {
+    width: 100%;
+    /* Each section takes up the full width of the container */
+    padding-top: 5px;
+    /* Adjust padding for smaller screens */
+    padding-bottom: 10px;
+    font-size: 16px;
+  }
+
+  .descript-text {
+    padding-left: 30px;
+    padding-right: 30px;
+  }
+
+  #fi-imagery {
+    margin-bottom: 0px;
+    bottom: solid 1px or
+  }
+
+  .work-header-text {
+    width: 100%;
+    /* Make sure the header text spans the full width */
+  }
+}
+
+
+/* work page- cambridge editorial */
+
+
+#camb-row {
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+  margin-top: 90px;
+  box-sizing: border-box;
+  /* border: solid 1px orange; */
+}
+
+#camb-text {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  width: 100%;
+  box-sizing: border-box;
+  /* border: 3px solid blue; */
+}
+
+.camb-header-text {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  font-size: 22px;
   font-family: 'Oswald', sans-serif;
   color: aliceblue;
-  /* border: 2px solid red; */
-  height: 65px;
-  padding-bottom: 55px;
-  margin-top: 70px;
-} 
-
-
-#vidR2{
-  margin-top: 30px;
+  width: 50%;
 }
+
+.camb-descript-text {
+  margin-top: 10px;
+  color: aliceblue;
+  width: 75%;
+  padding-left: 80px;
+  padding-right: 80px;
+  box-sizing: border-box;
+  font-size: 14px;
+  font-weight: 400;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+
+@media screen and (max-width: 1200px) {
+  .camb-header-text {
+    font-size: 22px;
+    /* Reduce header text size on smaller screens */
+    width: 90%;
+    /* Increase width to use more space */
+    text-align: center;
+    /* Center align text */
+  }
+
+  .camb-descript-text {
+    font-size: 14px;
+    /* Reduce description text size on smaller screens */
+    width: 80%;
+    /* Increase width to use more space */
+    padding-left: 15px;
+    /* Reduce padding on smaller screens */
+    padding-right: 15px;
+    /* Reduce padding on smaller screens */
+    padding-top: 5px;
+    /* Adjust padding for smaller screens */
+    padding-bottom: 10px;
+  }
+
+  #camb-row {
+    margin-top: 40px;
+  }
+}
+
+/* Media query for responsive text on smaller screens */
+@media screen and (max-width: 768px) {
+  .camb-header-text {
+    font-size: 22px;
+    /* Reduce header text size on smaller screens */
+    width: 90%;
+    /* Increase width to use more space */
+    text-align: center;
+    /* Center align text */
+  }
+
+  .camb-descript-text {
+    font-size: 16px;
+    /* Reduce description text size on smaller screens */
+    width: 85%;
+    /* Increase width to use more space */
+    padding-left: 15px;
+    /* Reduce padding on smaller screens */
+    padding-right: 15px;
+    /* Reduce padding on smaller screens */
+    padding-top: 5px;
+    /* Adjust padding for smaller screens */
+    padding-bottom: 10px;
+  }
+
+  #camb-row {
+    margin-top: 40px;
+  }
+}
+
+
+
+#camb-row1 {
+  display: flex;
+  flex-wrap: wrap;
+  /* Allows the images to wrap onto the next row */
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  margin-top: 15px;
+  /* border: solid 1px blue; */
+}
+
+.camb-images {
+  padding: 20px;
+  /* Add padding to each image */
+  width: 25%;
+  /* Each image takes up 39% of the row width */
+  height: auto;
+  box-sizing: border-box;
+  /* Ensures padding is included in width calculation */
+  /* border: solid 1px red; */
+}
+
+
+@media screen and (max-width: 2000px) {
+
+  .camb-images,
+  .image-link {
+    padding-left: 10px;
+    padding-right: 10px;
+    padding-top: 0px;
+    width: 38%;
+    /* Each image takes up 47% of the row width on smaller screens */
+  }
+}
+
+@media screen and (max-width: 1500px) {
+
+  .camb-images,
+  .image-link {
+    padding-left: 10px;
+    padding-right: 10px;
+    padding-top: 0px;
+    width: 38%;
+    /* Each image takes up 47% of the row width on smaller screens */
+  }
+}
+
+@media screen and (max-width: 1000px) {
+
+  .camb-images,
+  .image-link {
+    padding-left: 10px;
+    padding-right: 10px;
+    padding-top: 0px;
+    width: 40%;
+    /* Each image takes up 47% of the row width on smaller screens */
+  }
+}
+
+@media screen and (max-width: 768px) {
+
+  .camb-images,
+  .image-link {
+    padding-left: 5px;
+    padding-right: 5px;
+    padding-top: 0px;
+  
+    width: 45%;
+    /* Each image takes up 47% of the row width on smaller screens */
+  }
+
+.image-link{
+margin-top: -10px;
+}
+
+}
+
+
+.image-link img {
+  /* display: block; Ensure the image takes the full width inside the anchor */
+  width: 100%;
+  /* Maintain the width set by the parent div */
+  height: auto;
+  align-items: center;
+  margin-top: 10px;
+}
+
+
+
 
 
 /* about */
 
 
-.about-t{
+.about-t {
   font-size: 18px;
   font-family: 'lora', sans-serif;
   font-weight: 400;
@@ -729,10 +1014,37 @@ margin-bottom: 80px;
   width: 40%;
   margin: 0px 50px 0px 0px;
   /* border: 3px solid blue; */
-  align-items: center;
+  /* align-items: center; */
+  display: flex;
+  flex-direction: column;
 }
 
-#about-r{
+.about-t2 {
+  font-size: 18px;
+  font-family: 'lora', sans-serif;
+  font-weight: 400;
+  color: aliceblue;
+  width: 30%;
+  margin: 32px 20px 0px 0px;
+  /* border: 3px solid blue; */
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+}
+
+
+.PDF{
+  margin-top: 20px;
+}
+
+#about-r3{
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  margin: 0;
+}
+
+#about-r {
 
   display: flex;
   flex-direction: row;
@@ -743,9 +1055,64 @@ margin-bottom: 80px;
   margin-bottom: 100px;
 }
 
-.about-img{
+.about-img {
   /* width: 500px; */
   width: 40%;
+}
+
+/* Media Query for smaller screens */
+@media (max-width: 768px) {
+  #about-r {
+    flex-direction: column; /* Stack items vertically */
+    align-items: center;
+    justify-content: center;
+    margin-top: 40px;
+  }
+
+  .about-t {
+    width: 80%; /* Make the text span the full width */
+    padding-left: 70px;
+    padding-right: 0px;
+    font-size: 16px;
+  }
+
+  .about-t2 {
+    font-size: 16px;
+  }
+
+  .about-img {
+    width: 85%; /* Make the image span the full width */
+    margin-top: 20px; /* Add some space above the image */
+  }
+}
+
+/* Media Query for smaller screens */
+@media (max-width: 1200px) {
+  #about-r {
+    flex-direction: column; /* Stack items vertically */
+    align-items: center;
+    justify-content: center;
+    margin-top: 40px;
+  }
+
+  .about-t {
+    width: 80%; /* Make the text span the full width */
+    padding-left: 70px;
+    padding-right: 0px;
+    font-size: 16px;
+  }
+
+  .about-t2 {
+    font-size: 16px;
+    margin-top: 40px;
+    margin-right: 0px;
+  }
+
+  .about-img {
+    width: 50%; /* Make the image span the full width */
+    margin-top: 30px; /* Add some space above the image */
+  }
+
 }
 
 
@@ -759,15 +1126,35 @@ margin-bottom: 80px;
   align-items: center;
   justify-content: center;
   /* border: 3px solid red; */
-  margin-top: 100px;
+  margin-top: 50px;
   margin-bottom: 100px;
-  
-  
-  
+
+
+
+}
+
+.c-main-t{
+  font-size: 40px;
+  font-family: 'Oswald', sans-serif;
+  color: orange;
 }
 
 .contact-t {
-  text-align: center; /* Center text horizontally */
-   background-color: rgba(171, 88, 239, 0.4);
-  padding: 40px;
+  text-align: center;
+  /* Center text horizontally */
+  /* background-color: rgba(171, 88, 239, 0.4); */
+
+  margin-top: 55px;
+  margin-bottom: -10px;
+  font-size: 25px;
+  font-family: 'Oswald', sans-serif;
+  color: rgb(201, 206, 211);
 }
+
+@media (max-width: 768px) {
+
+#contact-r {
+margin-top: 45px;
+}
+}
+
